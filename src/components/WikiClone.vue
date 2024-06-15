@@ -8,7 +8,7 @@ const error = ref(null)
 const isDarkTheme = ref(false)
 
 const searchWikipedia = async (query) => {
-    const encodeQuery = encodeURIComponent(query)
+    const encodedQuery = encodeURIComponent(query)
     const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=10&srsearch=${encodedQuery}`
     
     try {
